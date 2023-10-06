@@ -1,14 +1,14 @@
-import PrivateEquity from "../../public/imageCarousel/private-equity.png";
-import CompraDeAtivos from "../../public/imageCarousel/compra-de-ativos.png";
-import CompraDeEmpresas from "../../public/imageCarousel/compra-de-empresas.png";
-import LegalizacaoDeEmpresas from "../../public/imageCarousel/legalizacao-de-empresa.png";
-import EspecializacaoEmCompra from "../../public/imageCarousel/especializacao-em-compra.png";
-import FinancasEstruturada from "../../public/imageCarousel/financa-estruturada.png";
-import CaptacaoDeRecursos from "../../public/imageCarousel/captacao-de-recurso.png";
-import AquisicaoDeAtivos from "../../public/imageCarousel/aquisicao-de-ativos-estressados.png";
-import FundosDeInvestimento from "../../public/imageCarousel/fundos-de-investimento.png";
-import Financiamento from "../../public/imageCarousel/financiamento.png";
-import ViabilidadeDeRecurso from "../../public/imageCarousel/viabilidade-de-recursos.png";
+import PrivateEquity from "../assets/imgCarousel/private-equity.png";
+import CompraDeAtivos from "../assets/imgCarousel/compra-de-ativos.png";
+import CompraDeEmpresas from "../assets/imgCarousel/compra-de-empresas.png";
+import LegalizacaoDeEmpresas from "../assets/imgCarousel/legalizacao-de-empresa.png";
+import EspecializacaoEmCompra from "../assets/imgCarousel/especializacao-em-compra.png";
+import FinancasEstruturada from "../assets/imgCarousel/financa-estruturada.png";
+import CaptacaoDeRecursos from "../assets/imgCarousel/captacao-de-recurso.png";
+import AquisicaoDeAtivos from "../assets/imgCarousel/aquisicao-de-ativos-estressados.png";
+import FundosDeInvestimento from "../assets/imgCarousel/fundos-de-investimento.png";
+import Financiamento from "../assets/imgCarousel/financiamento.png";
+import ViabilidadeDeRecurso from "../assets/imgCarousel/viabilidade-de-recursos.png";
 
 type Carousel = {
   id: number;
