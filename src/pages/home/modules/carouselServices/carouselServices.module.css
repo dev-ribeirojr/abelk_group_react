@@ -50,8 +50,8 @@
   background-color: var(--red-normal);
 }
 .nextSlide {
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   background: var(--red-normal);
   color: var(--white-normal);
 

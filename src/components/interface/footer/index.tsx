@@ -1,9 +1,9 @@
 import styles from "./footer.module.css";
 import {
   FaInstagram,
-  FaYoutube,
+  // FaYoutube,
   FaWhatsapp,
-  FaFacebookF,
+  // FaFacebookF,
 } from "react-icons/fa";
 
 import Logo from "../../../assets/logo.png";
