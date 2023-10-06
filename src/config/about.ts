@@ -1,4 +1,4 @@
-import Hero from "../../public/hero.png";
+import Hero from "../assets/hero.png";
 type Values = {
   id: number;
   title: string;
