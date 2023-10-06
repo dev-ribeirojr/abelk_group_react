@@ -1,0 +1,78 @@
+.header {
+  background-color: var(--white-normal);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 70px;
+  z-index: 999;
+}
+.header section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.header section .menu {
+  color: var(--red-normal);
+  background-color: transparent;
+  border-radius: 4px;
+  height: 35px;
+  width: 35px;
+  display: none;
+}
+.header section .menu:hover {
+  color: var(--white-normal);
+  background-color: var(--red-normal);
+}
+
+.header section nav {
+  display: flex;
+  gap: 0.3rem;
+}
+.header section nav a {
+  color: var(--black-normal);
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.header section nav .active {
+  background-color: var(--red-normal);
+  color: var(--white-normal);
+}
+.header section nav a:hover {
+  background-color: var(--red-normal);
+  color: var(--white-normal);
+}
+
+@media screen and (max-width: 768px) {
+  .header section .menu {
+    display: flex;
+  }
+  .header section .containerMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.041);
+  }
+  .header section nav {
+    background-color: var(--red-normal);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+    padding: 1px;
+  }
+
+  .header section nav a {
+    background-color: var(--white-normal);
+    border-radius: 0;
+  }
+}

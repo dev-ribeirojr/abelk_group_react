@@ -6,8 +6,10 @@ import { dataCarousel } from "../../../../config/carousel";
 import { whats } from "../../../../config/links";
 
 import { BiRightArrowAlt } from "react-icons/bi";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { WidthContext } from "../../../../contexts/widthContext";
 export function CarouselServices() {
+  const { preview } = useContext(WidthContext);
   const swiperRef = useRef<any>();
 
   function next() {
@@ -20,7 +22,7 @@ export function CarouselServices() {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
-        slidesPerView={2}
+        slidesPerView={preview}
         spaceBetween={10}
         autoplay={{
           delay: 4000,
@@ -42,10 +44,7 @@ export function CarouselServices() {
             </div>
           </SwiperSlide>
         ))}
-        <button
-          onClick={next}
-          className={styles.nextSlide}
-        >
+        <button onClick={next} className={styles.nextSlide}>
           <BiRightArrowAlt />
         </button>
       </Swiper>
