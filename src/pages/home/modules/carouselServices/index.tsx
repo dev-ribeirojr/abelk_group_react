@@ -1,15 +1,13 @@
-"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import styles from "./carousel.module.css";
+import styles from "./carouselServices.module.css";
 
-import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
+import { dataCarousel } from "../../../../config/carousel";
+import { whats } from "../../../../config/links";
 
 import { BiRightArrowAlt } from "react-icons/bi";
 import { useRef } from "react";
-import { dataCarousel } from "../../../config/carousel";
-import { whats } from "../../../config/links";
-
-export function Carousel() {
+export function CarouselServices() {
   const swiperRef = useRef<any>();
 
   function next() {
@@ -22,23 +20,20 @@ export function Carousel() {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
+        slidesPerView={2}
+        spaceBetween={10}
         autoplay={{
           delay: 4000,
           disableOnInteraction: false,
         }}
-        effect={"fade"}
         loop={true}
-        modules={[Autoplay, EffectFade, Pagination]}
+        modules={[Autoplay]}
         className={styles.carousel}
       >
-        {dataCarousel.map((slide: any) => (
+        {dataCarousel.map((slide) => (
           <SwiperSlide key={slide.id} className={styles.card}>
-            <img
-              src={slide.img}
-              alt={`Imagem ${slide.title}`}
-              className={styles.img}
-            />
-            <div className={styles.info}>
+            <img src={slide.img} alt={`Imagem ${slide.title}`} />
+            <div>
               <h1>{slide.title}</h1>
               <p>{slide.text}</p>
               <a href={whats} target="_blank" rel="external">
@@ -47,11 +42,12 @@ export function Carousel() {
             </div>
           </SwiperSlide>
         ))}
-        <section className={styles.nextSlide}>
-          <button onClick={next}>
-            <BiRightArrowAlt />
-          </button>
-        </section>
+        <button
+          onClick={next}
+          className={styles.nextSlide}
+        >
+          <BiRightArrowAlt />
+        </button>
       </Swiper>
     </>
   );
